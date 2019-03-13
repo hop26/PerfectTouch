@@ -1,0 +1,166 @@
+/*computers and tablets (landscape)*/
+@media screen and (min-width: 1366px){
+
+  @media screen and (min-height: 768px){
+
+    @-webkit-keyframes loadScreen{
+      0%{height: 100%}
+      100%{height: 0%}
+    }
+
+    @keyframes loadScreen{
+      0%{height: 100%}
+      100%{height: 0%}
+    }
+    @-webkit-keyframes loadBar{
+      0%{width: 0%}
+      100%{width: 100%}
+    }
+    @keyframes loadBar{
+      0%{width: 0%}
+      100%{width: 100%}
+    }
+
+    #loadScreen{
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      z-index: 20;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: flex-start;
+              align-items: flex-start;
+      -webkit-justify-content: flex-end;
+              justify-content: flex-end;
+      -webkit-transition: height .75s ease-out;
+      transition: height .75s ease-out;
+      overflow: hidden;
+      animation: loadScreen 1s 4s forwards
+      }
+
+      #loadBar{
+        height: 15px;
+        width: 0%;
+        -webkit-transition: width 2s ease-in;
+        transition: width 2s ease-in;
+        background-color: black;
+        -webkit-animation: loadBar 1s 3s forwards;
+                animation: loadBar 1s 3s forwards
+      }
+
+  @-webkit-keyframes rollUp{
+    0%{height: 100%;}
+    100%{height: 0%;}
+  }
+
+  @keyframes rollUp{
+    0%{height: 100%;}
+    100%{height: 0%;}
+  }
+
+    .rollUp{
+      -webkit-animation: rollUp .5s ease-out forwards;
+              animation: rollUp .5s ease-out forwards
+    }
+    .initialWords{
+      color: #807979;
+      font-size: 2em;
+      margin: 0;
+      position: relative;
+      /* animation: wordFade 5s forwards */
+      bottom: 38px;
+    }
+
+    @-webkit-keyframes wordFade{
+      0%{color: white;}
+      100%{color: red;}
+    }
+
+    @keyframes wordFade{
+      0%{top: 35px;}
+      100%{top: 0px;}
+    }
+
+    #words{
+      background-color: 'black';
+      bottom: 85px;
+      position: relative;
+      height: 40px;
+      width: 'auto';
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      /* -webkit-transition: height 2s; */
+      /* transition: height 2s; */
+      overflow: hidden;
+      /* animation: wordFade 2s 2s forwards; */
+    }
+
+    #word1{/* top:35px; */-webkit-animation: wordFade .5s 1.8s forwards;animation: wordFade 2s 1.8s forwards;margin-left: 26px;}
+    #word2{margin-left: 43px;top:35px;-webkit-animation: wordFade .5s 2.3s forwards;animation: wordFade 2s 2.3s forwards;}
+    #word3{margin-left: 46px;top:35px;-webkit-animation: wordFade .5s 2.8s forwards;animation: wordFade 2s 2.8s forwards;}
+
+    #wordFade{
+
+    }
+
+    @-webkit-keyframes roll_in{
+      0%{left: -30%; height: 37px}
+      50%{left: 31.5%; height: 37px}
+      100%{left: 31.5%; height: 680px}
+    }
+
+    @keyframes roll_in{
+      0%{left: -30%; height: 37px}
+      50%{left: 31.5%; height: 37px}
+      100%{left: 31.5%; height: 680px}
+    }
+
+    @-webkit-keyframes img_show{
+      0%{opacity: 0}
+      100%{opacity:1}
+    }
+
+    @keyframes img_show{
+      0%{opacity: 0}
+      100%{opacity:1}
+    }
+
+    #img-roll{
+      opacity: 1;
+      height: 37px;
+      position: absolute;
+      bottom: 7%;
+      display: inline-block;
+      left: -30%;
+      width: 408px;
+      border: 5px solid black;
+      background-color: black;
+      /* border-radius: 15%; */
+      -webkit-animation: roll_in 1.4s 4.4s forwards;
+              animation: roll_in 1.4s 4.4s forwards;
+      overflow:hidden
+    }
+
+    #test1{
+  height: 100%;
+  position: relative;
+  -webkit-transition: opacity 2s max-height 2s;
+  transition: opacity 2s max-height 2s;
+  opacity: 0;
+  -webkit-animation: img_show 1s 5s forwards;
+  animation: img_show 1s 5s forwards;
+  max-width: 100%;
+  -webkit-transform: scale(1.5);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+    }
+}
+}

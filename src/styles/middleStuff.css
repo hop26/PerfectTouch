@@ -1,0 +1,62 @@
+#middleStuff{
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#middle-image{
+  position: absolute;
+  left: 23%;
+  max-height: 708px;
+  height: 100%;
+}
+
+#rolling_text_div{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 100%;
+  
+  position:relative;
+  top: 21%;
+
+}
+
+.rolling_number{
+  color: white;
+  font-size: 8em;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  position: relative;
+
+  line-height: .8;
+}
+
+.middle-headline{
+  position: relative;
+  max-width: 4em;
+  align-self: flex-end;
+  display: inline;
+  font-size: 6em;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+  right: 22%;
+}
+
+#nav_arrow_div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 4em;
+  position: relative;
+  color: white;
+  width: 280px;
+  z-index: 2;
+  /* left: 252px; */
+  /* float: left; */
+  align-self: flex-end;
+}
